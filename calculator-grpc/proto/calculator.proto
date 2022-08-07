@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package="pb/";
+
+message CalculatorPayload{
+    int32 x=1;
+    int32 y=2;
+}
+message CalculatorResult{
+int32 result =1;
+}
+
+service CalculatorService {
+    rpc Add (CalculatorPayload) returns (CalculatorResult){};
+    rpc Substract (CalculatorPayload) returns (CalculatorResult){};
+    rpc Multiply (CalculatorPayload) returns (CalculatorResult){};
+}
