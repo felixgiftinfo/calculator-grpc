@@ -11,7 +11,7 @@ func (s *CalculatorServer) Add(ctx context.Context, payload *CalculatorPayload) 
 	return &CalculatorResult{Result: result}, nil
 }
 
-func (s *CalculatorServer) Sub(ctx context.Context, payload *CalculatorPayload) (*CalculatorResult, error) {
+func (s *CalculatorServer) Substract(ctx context.Context, payload *CalculatorPayload) (*CalculatorResult, error) {
 	result := payload.X - payload.Y
 	return &CalculatorResult{Result: result}, nil
 }
